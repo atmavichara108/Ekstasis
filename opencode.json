@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "curator",
+  "lsp": false,
+  "permission": {
+    "edit": {
+      "*": "allow",
+      "В поисках Пустоты/**": "deny",
+      "*.py": "deny",
+      "*.gs": "deny"
+    },
+    "write": {
+      "*": "allow",
+      "В поисках Пустоты/**": "deny",
+      "*.py": "deny",
+      "*.gs": "deny"
+    }
+  }
+}

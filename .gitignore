@@ -1,0 +1,5 @@
+.obsidian/workspace*
+*.swp
+*.tmp
+.cache/
+# Память/session-log/ не игнорируется: это ценная история проекта.
