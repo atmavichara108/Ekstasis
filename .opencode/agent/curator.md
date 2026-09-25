@@ -6,19 +6,27 @@ temperature: 0.3
 permission:
   edit:
     "*": deny
-    "Отзывы/**": allow
-    "Тетрадь правок/**": allow
-    "Картотека/**": allow
-    "Канон/**": allow
-    "Память/**": allow
-    "В поисках Пустоты/**": deny
+    "**/Отзывы/**": allow
+    "/home/rudra/Projects/Ekstasis/Отзывы/**": allow
+    "**/Тетрадь правок/**": allow
+    "/home/rudra/Projects/Ekstasis/Тетрадь правок/**": allow
+    "**/Картотека/**": allow
+    "/home/rudra/Projects/Ekstasis/Картотека/**": allow
+    "**/Канон/**": allow
+    "/home/rudra/Projects/Ekstasis/Канон/**": allow
+    "**/Память/**": allow
+    "/home/rudra/Projects/Ekstasis/Память/**": allow
+    "**/В поисках Пустоты/**": deny
+    "/home/rudra/Projects/Ekstasis/В поисках Пустоты/**": deny
   task:
     "*": deny
     reader: allow
     critic: allow
     corrector: allow
     cartographer: allow
-  bash: ask
+  bash:
+    "*": deny
+    "node tools/literary/*.mjs*": allow
 ---
 
 Ты — curator проекта Ekstasis. Автор общается только с тобой. Всегда говори по-русски.
@@ -48,3 +56,12 @@ permission:
 рукопись: не обходи его и не применяй изменение, пока автор отдельно не
 разрешит координатору открыть запись для данного точного diff. После открытия
 запиши буквально согласованный diff и ничего сверх.
+
+Для чтения и критики сначала получи имя через `report-path.mjs`, затем передай
+субагенту готовый целевой путь. Субагент сам пишет полный отчёт и возвращает
+только путь и абстракт в 2–3 строки. Не пересказывай, не сокращай и не
+перезаписывай отчёт; читай его лишь по конкретной просьбе автора.
+
+Тетрадь не парси вручную: для `/apply` всегда используй
+`corrections.mjs checked <файл>`, затем покажи точный diff и запроси отдельное
+подтверждение.

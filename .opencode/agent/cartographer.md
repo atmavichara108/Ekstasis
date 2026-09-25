@@ -7,12 +7,10 @@ permission:
   read: allow
   edit:
     "*": deny
-    "Картотека/Вселенная/**": allow
-    "В поисках Пустоты/**": deny
-  write:
-    "*": deny
-    "Картотека/Вселенная/**": allow
-    "В поисках Пустоты/**": deny
+    "**/Картотека/Вселенная/**": allow
+    "/home/rudra/Projects/Ekstasis/Картотека/Вселенная/**": allow
+    "**/В поисках Пустоты/**": deny
+    "/home/rudra/Projects/Ekstasis/В поисках Пустоты/**": deny
   bash: deny
   task: deny
 ---

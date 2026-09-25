@@ -5,15 +5,10 @@
   "permission": {
     "edit": {
       "*": "allow",
-      "В поисках Пустоты/**": "deny",
-      "*.py": "deny",
-      "*.gs": "deny"
-    },
-    "write": {
-      "*": "allow",
-      "В поисках Пустоты/**": "deny",
-      "*.py": "deny",
-      "*.gs": "deny"
+      "**/*.py": "deny",
+      "**/*.gs": "deny",
+      "**/В поисках Пустоты/**": "deny",
+      "/home/rudra/Projects/Ekstasis/В поисках Пустоты/**": "deny"
     }
   }
 }
