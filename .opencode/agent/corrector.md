@@ -6,7 +6,6 @@ temperature: 0.1
 permission:
   read: allow
   edit:
-    "*": deny
     "**/Тетрадь правок/**": allow
     "/home/rudra/Projects/Ekstasis/Тетрадь правок/**": allow
     "**/В поисках Пустоты/**": deny

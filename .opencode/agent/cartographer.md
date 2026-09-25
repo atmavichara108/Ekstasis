@@ -6,7 +6,6 @@ temperature: 0.4
 permission:
   read: allow
   edit:
-    "*": deny
     "**/Картотека/Вселенная/**": allow
     "/home/rudra/Projects/Ekstasis/Картотека/Вселенная/**": allow
     "**/В поисках Пустоты/**": deny
